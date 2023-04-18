@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vending Machine</title>
+</head>
+
+<body>
+    <h1>Vending Machine</h1>
+    <form style="margin-bottom: 10px;">
+        <span>Fives</span> <input type="text" name="fives" id="fives" placeholder="0" value="0" oninput="tally()">
+        <br>
+        <span>Ones</span> <input type="text" name="ones" id="ones" placeholder="0" value="0" oninput="tally()">
+        <br>
+        <span>Quarters</span> <input type="text" name="quarters" id="quarters" placeholder="0" value="0"
+            oninput="tally()">
+        <br>
+        <span>Dimes</span> <input type="text" name="dimes" id="dimes" placeholder="0" value="0" oninput="tally()">
+        <br>
+        <span>Nickels</span> <input type="text" name="nickels" id="nickels" placeholder="0" value="0" oninput="tally()">
+    </form>
+
+    <button value="Coca-Cola" id="cola" onclick="dispenseSoda(0)">Coca-Cola</button>
+    <button value="Sprite" id="sprite" onclick="dispenseSoda(1)">Sprite</button>
+    <button value="Fanta" id="fanta" onclick="dispenseSoda(2)">Fanta</button>
+    <button value="Fresca" id="fresca" style="margin-bottom: 10px;" onclick="dispenseSoda(3)">Fresca</button>
+    <br>
+    <button value="Cancel" id="cancel" onclick="cancel()">Cancel</button>
+
+    <h2>Money Inserted: $<span id="paid">0.00</span></h2>
+    <h2 id="message">Insert money then choose a soda.</h2>
+
+    <script src="vending.js"></script>
+</body>
+
+</html>
